@@ -4,12 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/style/css/main.css">
     <title>0512</title>
   </head>
   <body>
     <div id="card-main-area">
-      <div class="left-wrapper"></div>
+      <div class="left-wrapper">
+        <!-- <div class="progress-line"></div> -->
+        <div class="card-section">
+          <div class="input-section">
+            <div class="card-input full-card-input">
+              <label>Name on Card</label>
+              <input type="text">
+            </div>
+            <div class="card-input full-card-input">
+              <label>Card Number</label>
+              <input type="text">
+            </div>
+            <div class="small-card-input-wrapper">
+              <div class="card-input small-card-input">
+                <label>Valid Through</label>
+                <input type="text">
+              </div>
+              <div class="flex-blank-1"></div>
+              <div class="card-input small-card-input">
+                <label>CVV</label>
+                <input type="text">
+              </div>
+            </div>
+          </div>
+          <div class="submit-pannel">
+            <div class="total-display">
+              <h3>Total</h3>
+              <h1>1400 NT</h1>
+            </div>
+            <button type="submit">Checkout</button>
+          </div>
+        </div>
+      </div>
       <div class="right-wrapper"></div>
     </div>
     

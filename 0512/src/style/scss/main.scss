@@ -1,12 +1,17 @@
 * {
   box-sizing: border-box;
   font-size: 10px;
+  font-family: 'Noto Sans';
 }
 
 html, body {
   margin: 0; padding: 0;
   height: 100vh;
   overflow: hidden;
+}
+
+.flex-blank-1 {
+  flex: 1;
 }
 
 #card-main-area {
@@ -22,6 +27,81 @@ html, body {
   .left-wrapper {
     flex: 4;
     height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 12em 12em 0;
+
+    .card-section {
+      display: flex;
+      flex-wrap: wrap;
+      height: 450px;
+      width: 400px;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .input-section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 2.6em;
+      }
+
+      .card-input {
+        // margin-bottom: 1.8em;
+        label {
+          display: block;
+          font-size: 1.6em;
+          margin-bottom: .3em;
+          font-weight: 600;
+
+        }
+
+        input {
+          width: 100%;
+          font-size: 2em;
+          height: 2.6em;
+          line-height: 1.6em;
+          border-radius: 1em;
+          border: solid 1px #6d6d6d;
+        }
+      }
+      .full-card-input {
+        width: 100%;
+      }
+      .small-card-input-wrapper {
+        display: flex;
+        .small-card-input {
+          flex: 2;
+        }
+      }
+      .submit-pannel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .total-display {
+          flex: 2;
+          h3 {
+            color: #6d6d6d;
+            font-size: 2em;
+            margin: 0;
+          }
+          h1 {
+            font-size: 2.4em;
+            margin: 0;
+          }
+        }
+        button {
+          flex: 2;
+          background-color: #333;
+          color: #f7f7f7;
+          font-size: 2em;
+          padding: 0.6em 0;
+          border-radius: 5px;
+          border: none;
+        }
+      }
+    }
   }
 
   .right-wrapper {
