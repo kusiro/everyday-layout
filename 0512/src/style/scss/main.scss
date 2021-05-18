@@ -23,6 +23,7 @@ html, body {
   margin-top: 25%;
   transform: translateY(-50%);
   display: flex;
+  overflow: hidden;
 
   .left-wrapper {
     flex: 5;
@@ -139,8 +140,110 @@ html, body {
 
   .right-wrapper {
     flex: 4;
-    border: solid 1px;
-    border-radius: 50px 0 10px 50px;
+    border-left: solid 1px;
+    border-radius: 7em 0 10px 7em;
     height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    padding: 6em;
+
+    .header {
+      border-bottom: 1px solid #666666;
+      h1 {
+        color: #f7f7f7;
+        font-size: 3.2em;
+      }
+    }
+
+    .shopping-item-wrapper {
+      padding: 6em 0;
+      width: 100%;
+      height: 60%;
+      border-bottom: solid 1px #666;
+
+      .shopping-item {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 4em;
+        margin-bottom: 4em;
+
+        .product-picture {
+          width: 60px;
+          height: 60px;
+          border-radius: 5px;
+          background-color: #fff;
+        }
+
+        .product-detail {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          .product-name {
+            color: #f7f7f7;
+            font-size: 1.6em;
+            letter-spacing: 0.05em;
+          }
+          .product-amount {
+            color: #f7f7f7;
+            font-size: 1.4em;
+          }
+        }
+
+        .product-price {
+          color: #f7f7f7;
+          font-size: 2.2em;
+        }
+
+      }
+    }
+
+    .shipping-wrapper {
+      width: 100%;
+      padding: 2em 0;
+      border-bottom: solid 1px #666;
+
+      .shipping {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        letter-spacing: 0.01em;
+
+        h1 {
+          font-size: 1.6em;
+          color: #f7f7f7;
+          font-weight: 100;
+          margin: 0;
+        }
+        .shipping-price {
+          font-size: 2em;
+          font-weight: bold;
+          color: #f7f7f7;
+        }
+      }
+    }
+
+    .total-price-wrapper {
+      width: 100%;
+      .total-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 0;
+
+        h1 {
+          margin: 0;
+          color: #f7f7f7;
+          font-size: 2.2em;
+          font-weight: normal;
+        }
+        .total-price {
+          color: #f7f7f7;
+          font-size: 2.6em;
+          font-weight: 600;
+        }
+      }
+    }
   }
 }
