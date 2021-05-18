@@ -17,7 +17,7 @@ html, body {
 
 #card-main-area {
   border-radius: 7em;
-  width: 90%;
+  width: 80%;
   height: 80%;
   border: solid 1px;
   margin: auto;
@@ -26,12 +26,40 @@ html, body {
   display: flex;
 }
 #card-main-area .left-wrapper {
-  flex: 4;
+  flex: 5;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   padding: 0 12em 12em 0;
+}
+#card-main-area .left-wrapper .progress-line {
+  width: 30%;
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+#card-main-area .left-wrapper .progress-line hr {
+  border-bottom: solid 2px;
+  border-top: none;
+  margin: 0;
+}
+#card-main-area .left-wrapper .progress-line .progress-circle {
+  top: 0;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: solid 1px;
+  position: absolute;
+  background-color: #333;
+  transform: translate(50%, -50%);
+}
+#card-main-area .left-wrapper .progress-line .current {
+  left: 60px;
+}
+#card-main-area .left-wrapper .progress-line .progress-circle:last-child {
+  right: 0;
+  background-color: #fff;
 }
 #card-main-area .left-wrapper .card-section {
   display: flex;
@@ -97,7 +125,7 @@ html, body {
   border: none;
 }
 #card-main-area .right-wrapper {
-  flex: 3;
+  flex: 4;
   border: solid 1px;
   border-radius: 50px 0 10px 50px;
   height: 100%;
