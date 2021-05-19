@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: 0.7s;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  position: relative;
+  font-family: "Quicksand";
+}
+.container hr {
+  width: 3em;
+  margin: 0;
+  border: none;
+  border-bottom: solid 1.1px #1e2228;
+}
+.container p {
+  margin: 0;
+}
+
+.dark-theme-switch {
+  width: 7em;
+  height: 3em;
+  border-radius: 4em;
+  position: relative;
+  cursor: pointer;
+}
+.dark-theme-switch .theme-icon-container {
+  position: relative;
+  display: inline-block;
+  width: 2.4em;
+  height: 2.4em;
+  top: calc((3em - 2.4em) / 2);
+  vertical-align: middle;
+  border-radius: 50%;
+  z-index: 2;
+}
+.dark-theme-switch .theme-icon-container .icon {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%) rotateZ(10deg);
+  margin: 0 auto;
+}
+.dark-theme-switch .theme-icon-container .icon img {
+  transition: 0.7s;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.dark-theme-switch .theme-name {
+  position: relative;
+  display: inline-block;
+  top: calc((3em - 1.1em) / 2 - 0.5em);
+  height: 1.1em;
+  font-size: 1.2em;
+  font-family: "Quicksand", sans-serif;
+  z-index: 1;
+}
+
+.dark-theme {
+  color: #f7f7f7;
+  background-color: #1e2228;
+  border: solid 1em #444c56;
+}
+.dark-theme hr {
+  border-bottom: solid 1.1px #444c56;
+}
+
+.bright-theme {
+  color: #1e2228;
+  background-color: #f7f7f7;
+  border: solid 1em #1e2228;
+}
+.bright-theme hr {
+  border-bottom: solid 1.1px #1e2228;
+}
+
+.dark-theme-switch.bright {
+  border: solid 1px #1e2228;
+  background-color: #1e2228;
+}
+.dark-theme-switch.bright .theme-icon-container {
+  left: calc((3em - 2.4em) / 2);
+  background-color: #f7f7f7;
+}
+.dark-theme-switch.bright .theme-icon-container .sun-icon {
+  opacity: 0;
+}
+.dark-theme-switch.bright .theme-name {
+  left: 0.5em;
+  color: #f7f7f7;
+}
+
+.dark-theme-switch.dark {
+  border: solid 1px #444c56;
+  background-color: #f7f7f7;
+}
+.dark-theme-switch.dark .theme-icon-container {
+  left: calc(100% - 2.7em);
+  background-color: #1e2228;
+}
+.dark-theme-switch.dark .theme-icon-container .moon-icon {
+  opacity: 0;
+}
+.dark-theme-switch.dark .theme-name {
+  left: -1.8em;
+  color: #1e2228;
+}
+
+/*# sourceMappingURL=style.css.map */

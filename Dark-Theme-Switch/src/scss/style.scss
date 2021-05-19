@@ -1,0 +1,140 @@
+$color-scale-gray: #1e2228;
+$color-scale-white: #f7f7f7;
+$color-border-gray: #444c56;
+$color-border-dark: #1e2228;
+
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: 0.7s;
+}
+
+html, body {
+  margin: 0; padding: 0;
+  width: 100vw; height: 100vh;
+}
+
+#app {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  position: relative;
+  font-family: 'Quicksand';
+
+  hr {
+    width: 3em;
+    margin: 0;
+    border: none;
+    border-bottom: solid 1.1px $color-border-dark;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.dark-theme-switch {
+  width: 7em;
+  height: 3em;
+  border-radius: 4em;
+  position: relative;
+  cursor: pointer;
+
+  .theme-icon-container {
+    position: relative;
+    display: inline-block;
+    width: 2.4em; height: 2.4em;
+    top: calc((3em - 2.4em) / 2);
+    vertical-align: middle;
+    border-radius: 50%;
+    z-index: 2;
+
+    .icon {
+      position: relative;
+      width: 70%;
+      height: 70%;
+      top: 50%;
+      transform: translateY(-50%) rotateZ(10deg);
+      margin: 0 auto;
+      img {
+        transition: 0.7s;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  .theme-name {
+    position: relative;
+    display: inline-block;
+    top: calc((3em - 1.1em) / 2 - 0.5em);
+    height: 1.1em;
+    font-size: 1.2em;
+    font-family: 'Quicksand', sans-serif;
+    z-index: 1;
+  }
+}
+
+.dark-theme {
+  color: $color-scale-white;
+  background-color: $color-scale-gray;
+  border: solid 1em $color-border-gray;
+
+  hr {
+    border-bottom: solid 1.1px $color-border-gray;
+  }
+}
+.bright-theme {
+  color: $color-scale-gray;
+  background-color: $color-scale-white;
+  border: solid 1em $color-border-dark;
+
+  hr {
+    border-bottom: solid 1.1px $color-border-dark;
+  }
+}
+
+.dark-theme-switch.bright {
+  border: solid 1px $color-border-dark;
+  background-color: $color-scale-gray;
+
+    .theme-icon-container {
+      left: calc((3em - 2.4em) / 2);
+      background-color: $color-scale-white;
+      .sun-icon {
+        opacity: 0;
+      }
+    }
+
+    .theme-name {
+      left: 0.5em;
+      color: $color-scale-white;
+    }
+}
+
+.dark-theme-switch.dark {
+  border: solid 1px $color-border-gray;
+  background-color: $color-scale-white;
+
+  .theme-icon-container {
+    left: calc(100% - 2.7em);
+    background-color: $color-scale-gray;
+
+    .moon-icon {
+      opacity: 0;
+    }
+  }
+
+  .theme-name {
+    left: -1.8em;
+    color: $color-scale-gray;
+  }
+}
