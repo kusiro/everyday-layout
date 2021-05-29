@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+html, body {
+  margin: 0; padding: 0;
+}
+
+body {
+  width: 100vw; height: 100vh;
+  position: relative;
+}
+
+.clip-layer {
+  position: absolute;
+  z-index: 10;
+  .background {
+    object-fit: cover;
+    display: block;
+    mask: url('../../img/dog.jpg') no-repeat;
+    mask-size:300px 300px;
+    -webkit-mask: url('../../img/dog.jpg') no-repeat;
+    -webkit-mask-size: 300px 300px;
+    -webkit-mask-border: none;
+  }
+}
+.full-image {
+  width: 100vw; height: 100vh;
+  background-image: url('../../img/dog.jpg');
+  background-repeat: no-repeat;
+  filter: blur(10px);
+}
